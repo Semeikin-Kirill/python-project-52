@@ -1,3 +1,78 @@
+<!DOCTYPE html>
+{% load django_bootstrap5 %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:'ru' }}">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page title -->
+    <title>{% trans 'Title' %}</title>
+
+    <!-- Bootstrap CSS -->
+    {% bootstrap_css %}
+
+    <!-- Bootstrap JavaScript if it is in head -->
+    {% if 'javascript_in_head'|bootstrap_setting %}
+        {% bootstrap_javascript %}
+    {% endif %}
+
+    {% block bootstrap5_extra_head %}{% endblock %}
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">{% trans 'ProjectName' %}</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/users/">{% trans 'Users' %}</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login/">{% trans 'login' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/create/">{% trans 'Registration' %}</a>
+          </li>
+
+      </ul>
+    </div>
+  </nav>
+<div class="container wrapper flex-grow-1">
+  {% block bootstrap5_content %} CONTENT {% endblock %}
+</div>
+<footer>
+  <div class="container my-5 pt-4 border-top">
+    <a target="_blank" href="https://github.com/Semeikin-Kirill?tab=repositories">{% trans 'Name' %}</a>
+  </div>
+</footer>
+
+<!-- Bootstrap JavaScript if it is in body -->
+{% if not 'javascript_in_head'|bootstrap_setting %}
+    {% bootstrap_javascript %}
+{% endif %}
+
+{% block bootstrap5_extra_script %}{% endblock %}
+
+</body>
+
+</html>
+
+
+
+<!--
 <html lang="ru-ru"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Менеджер задач Hexlet</title>
@@ -41,3 +116,4 @@
 
 </body>
 </html>
+-->

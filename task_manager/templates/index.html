@@ -1,11 +1,14 @@
 {% extends "base.html" %}
-{% block content %}
+{% load i18n %}
+{% block bootstrap5_content %}
+<h1 class="my-4"></h1>
+<h1 class="my-4"></h1>
 <div class="card">
     <div class="card-body p-5 bg-light">
-      <div class="display-4">Привет!</div>
-      <p class="lead">Другие проекты.</p>
+      <div class="display-4">{% trans 'Greeting' %}</div>
+      <p class="lead">{% trans 'OtherProjects' %}.</p>
       <hr>
-      <a class="btn btn-primary btn-lg" href="https://github.com/Semeikin-Kirill?tab=repositories">Узнать больше</a>
+      <a class="btn btn-primary btn-lg" href="https://github.com/Semeikin-Kirill?tab=repositories">{% trans 'LearnMore' %}</a>
     </div>
   </div>
 {% endblock %}
