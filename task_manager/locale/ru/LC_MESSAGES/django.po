@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 20:22+0300\n"
+"POT-Creation-Date: 2023-12-03 19:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,38 +19,42 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: task_manager/templates/base.html:14
+#: settings.py:127
+msgid "Russian"
+msgstr ""
+
+#: templates/base.html:14
 msgid "Title"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/base.html:30
+#: templates/base.html:30
 msgid "ProjectName"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/base.html:37
+#: templates/base.html:37
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:44
+#: templates/base.html:44
 msgid "login"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:47
+#: templates/base.html:47
 msgid "Registration"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:58
+#: templates/base.html:58
 msgid "Name"
-msgstr "Semeikin-Kirill"
+msgstr "Semeikin Kirill"
 
-#: task_manager/templates/index.html:8
+#: templates/index.html:8
 msgid "Greeting"
 msgstr "Добро пожаловать в Менеджер задач"
 
-#: task_manager/templates/index.html:9
+#: templates/index.html:9
 msgid "OtherProjects"
-msgstr "Посмотри на другие проекты на GitHub"
+msgstr "Узнать о других проектах"
 
-#: task_manager/templates/index.html:11
+#: templates/index.html:11
 msgid "LearnMore"
 msgstr "Узнать больше"
